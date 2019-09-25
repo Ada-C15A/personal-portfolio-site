@@ -1,5 +1,6 @@
 body {
-  font-family: 'Bowlby One SC', cursive;
+  font-family: 'Raleway Dots', cursive;
+  /* font-family: 'Bowlby One SC', cursive; */
   padding: 40px;
 }
 
@@ -9,7 +10,7 @@ nav {
 
 .nav-header ul li {
   display: inline;
-  text-align: center;
+  font-size: 1.5rem;
   list-style-type: none;
   padding: 10px 30px;
 }
@@ -38,8 +39,12 @@ nav {
   }
 }
 
-.links{
-  padding: 
+.motto {
+  font-size: 1.5rem;
+}
+
+.links {
+  font-size: 1.5rem;
 }
 
 main {
