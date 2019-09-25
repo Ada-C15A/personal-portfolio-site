@@ -1,7 +1,7 @@
 body {
   font-family: 'Raleway Dots', cursive;
   /* font-family: 'Bowlby One SC', cursive; */
-  padding: 40px;
+  padding: 20px;
 }
 
 nav {
@@ -21,7 +21,8 @@ nav {
 }
 
 .hello h1 {
-  font-family: 'Raleway Dots', cursive;
+  padding: 20px;
+  font-family: 'League Script', cursive;
   font-size: 6rem;
   color: #fff;
   text-align: center;
