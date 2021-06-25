@@ -1,0 +1,65 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Big Shoulders Stencil Display', cursive;
+}
+.container {
+    padding: 10px;
+    display: grid;
+    height: 100vh;
+    grid-gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+.bigger{
+    resize: both;
+    position: relative;
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+    z-index: 2;
+    display: grid;
+    align-items: center;
+    background-image: url(../images/11.jpeg);
+    box-shadow: 0 0 20px -10px hsl(187deg 97% 24%);
+}
+    
+ul{
+    float: right;
+    list-style-type: none;
+    margin-top: 10px;
+    margin-right: 10px;
+}
+
+ul li{
+    display: inline-block;
+}
+
+ul li a{
+    text-decoration: none;
+    color: black;
+    padding: 5px 20px;
+    border: 1px solid transparent;
+    font-size: 25px;
+}
+
+ul li a:hover{
+    background-color:black;
+    color: white
+}
+
+img {
+    width: 210px;
+    height: 200px;
+    border-radius: 8px;
+}
+
+footer {
+    position: relative;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+
