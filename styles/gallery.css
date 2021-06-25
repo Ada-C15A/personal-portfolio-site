@@ -3,16 +3,14 @@
     padding: 0;
     font-family: 'Big Shoulders Stencil Display', cursive;
 }
-p{
-    font-family: monospace;
-}
-.parent{
-    height: auto;
-    display: grid;
-    grid-gap: 1rem;
-    grid-template-columns: repeat(3, 1fr);
-}
 .container {
+    padding: 10px;
+    display: grid;
+    height: 100vh;
+    grid-gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+.bigger{
     resize: both;
     position: relative;
     overflow: hidden;
@@ -21,28 +19,10 @@ p{
     z-index: 2;
     display: grid;
     align-items: center;
-    background-image: url(../images/7.jpeg);
+    background-image: url(../images/11.jpeg);
     box-shadow: 0 0 20px -10px hsl(187deg 97% 24%);
-} 
-.visual {
-    margin: 0.5rem 0;
 }
-.card{
-    display: flex;
-    flex-direction: column;
-    padding: 1rem;
-    justify-content: space-between;
-    background:white;
-
-}
-body {
-    font-family: system-ui, sans-serif;
-}
-  
-h1 {
-    font-size: 1.5rem;
-}
-
+    
 ul{
     float: right;
     list-style-type: none;
@@ -68,7 +48,7 @@ ul li a:hover{
 }
 
 img {
-    width: 220px;
+    width: 210px;
     height: 200px;
     border-radius: 8px;
 }
@@ -82,3 +62,4 @@ footer {
     color: white;
     text-align: center;
 }
+

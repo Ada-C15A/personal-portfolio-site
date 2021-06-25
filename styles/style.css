@@ -22,9 +22,8 @@ ul li a{
     text-decoration: none;
     color: white;
     padding: 5px 20px;
-    /* TODO with or without border*/
     border: 1px solid transparent;
-    /* border: 1px solid black; */
+    font-size: 25px;
 }
 ul li a:hover{
     background-color: white;
@@ -38,7 +37,7 @@ ul li a:hover{
 }
 .title{
     color: white;
-    font-size: 30px;
+    font-size: 40px;
     font-size-adjust: none;
 }
 footer{
@@ -48,6 +47,6 @@ footer{
     width: 100%;
     background-color: black;
     color: white;
-    text-align: right;
+    text-align: center;
 
 }
