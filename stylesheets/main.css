@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css?family=Sacramento');
+
+header, footer {
+    font-family: "Sacramento";
+    font-size: 1rem;
+  }
+
+header ul{
+font-size: 1.4rem;
+}
+
+main{
+    font-family: "Rokkitt";
+    font-size: 1.3rem;
+  }
+  
+main h1{
+font-size: 3.5rem;
+}
+
+header {
+position: fixed;
+top: 0px;
+width: 100%;
+height: 5.6rem;
+background-color: black;
+z-index:1000;
+opacity: 0.85;
+}
+
+a:link {
+    color: #1820e6;
+  }
+
+a:visited{
+    color: #5481f2;
+}
+
+a:hover {
+    color: lightblue;
+}
+
+.logo {
+    margin-top: 0;
+    float:left;
+    width: 40%;
+}
+
+.logo img{
+    float:left;
+    height: 5.6rem;
+    max-width: 40%;
+    margin-right: 4%;
+}
+
+.logo div{
+    display:inline-block;
+    margin-top: 5px;
+}
+
+.name h2{
+    margin: 0;
+}
+
+header nav {
+    margin-right: 3%;
+    float:right;
+}
+
+header ul {
+    margin: 2.225rem 0 0 0;
+    list-style-type: none;
+    height:5.6rem;
+}
+
+header li {
+    padding-right:25px;
+    display: inline-block;
+}
+
+body{
+    background-image:url(http://weather.jimlittle.net/web/pages/backgrounds/gradient_background2.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top:5.6rem;
+    padding-bottom:3rem;
+}
+
+/*************************************/
+
+footer section{
+    border-top: 1.5px solid black;
+    height: 7vw;
+}
+  
+/* #footer-portfolio{
+    margin-top: 83vw;
+}
+   */
+
+/*   
+#footer-blog{
+    margin-top: 90vw;
+} */
+  
+footer h4, footer p{
+    margin: 0 0 0 5%;
+    display: inline;
+    font-size: 1.5rem;
+}
+  
+footer h4{
+    font-size: 1.2rem;
+}
+  
+.thank-you{
+    line-height: 7vw;
+    padding-left: 23%;
+}
+  
+.footer-name{
+    display: block;
+    line-height: .1vw;
+}
