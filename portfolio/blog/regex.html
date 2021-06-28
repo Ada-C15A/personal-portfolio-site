@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dena Burd: Blog</title>
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css"
+        integrity="sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V" crossorigin="anonymous" />
+    <style>
+        h1 {
+            padding: 20px 0;
+            font-size: 32px;
+        }
+
+        h2 {
+            padding: 15px 0;
+            font-size: 28px;
+        }
+
+        h3,
+        h4 {
+            padding: 10px 0;
+            font-size: 24px;
+        }
+
+        p {
+            padding: 5px
+        }
+
+        .styled-table {
+            border-collapse: collapse;
+            margin: 25px 0;
+            font-size: 0.9em;
+
+            min-width: 400px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.25);
+        }
+
+        .styled-table thead tr {
+            background-color: #206A55;
+            color: #ffffff;
+            text-align: left;
+        }
+
+        .styled-table thead tr .blue {
+            background-color: #045E7C;
+            color: #ffffff;
+            text-align: left;
+        }
+
+        .styled-table th,
+        .styled-table td {
+            padding: 12px 15px;
+        }
+
+        .styled-table tbody tr {
+            border-bottom: 1px solid #dddddd;
+        }
+
+        .styled-table tbody tr:nth-of-type(even) {
+            background-color: #e7f3f0;
+        }
+
+        .styled-table tbody tr:last-of-type {
+            border-bottom: 2px solid #206A55;
+        }
+    </style>
+
+</head>
+
+
+<body>
+    <div id='wrapper'>
+        <div id="sidebar-wrapper">
+            <!-- <a href="#" id="menu-toggle-off"><i class="fas fa-bars"></i></a> -->
+            <div class='site-id' style="padding-top: 15vh;">
+                <h1>DENA <strong>BURD</strong></h1>
+                <h2>Software Engineer</h2>
+            </div>
+            <nav>
+                <ul class="sidebar-nav navbar-nav flex-column text-sm-center">
+                    <li><a href="../index.html#about">About</a></li>
+                    <li><a href="../index.html#projects">Projects</a></li>
+                    <li><a href="./posts.html">Blog</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <div id='page-content-wrapper'>
+            <div id="topbar-wrapper">
+                <a style="float:left" href="../index.html">Dena Burd</a>
+                <a href="#contact">Contact</a>
+                <a href="./posts.html">Blog</a>
+                <a href="../index.html#projects">Work</a>
+                <a href="../index.html#about">About</a>
+            </div>
+
+            <header>
+                <img class="post-image" src="../images/REGEX4.png" alt=" post image">
+            </header>
+            <div class='container'>
+                <h1>What are Regular Expressions?</h1>
+                <p>A regular expression (regex) is a pattern; it’s a sequence of characters (a string) that describes a
+                    search pattern. Regular expressions are most commonly used to search text and validate input. This
+                    post will explore how metacharacters, character classes, and lookaheads/lookbehinds represent text
+                    in a regular expression.</p>
+
+                <h2>Metacharacters</h2>
+                <p>Metacharacters such as `.`, `?`, and `$` have a special meaning inside regular expressions. </p>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th>Description</th>
+                            <th>Example</th>
+                            <th>Match</th>
+                            <th>Non Match</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>.</td>
+                            <td>Any letter, digit, symbol, or space</td>
+                            <td>c.po</td>
+                            <td>c3po, c@po, c po</td>
+                            <td>cap, cappuccino</td>
+                        </tr>
+                        <tr>
+                            <td>?</td>
+                            <td>0 or 1 times</td>
+                            <td>colou?r</td>
+                            <td>color, colour</td>
+                            <td>colur</td>
+                        </tr>
+                        <tr>
+                            <td>*</td>
+                            <td>0 or more times</td>
+                            <td>10*1</td>
+                            <td>11,101,100001</td>
+                            <td>001</td>
+                        </tr>
+                        <tr>
+                            <td>+</td>
+                            <td>1 or more times</td>
+                            <td>10+1</td>
+                            <td>101,100001</td>
+                            <td>11</td>
+                        </tr>
+                        <tr>
+                            <td>^</td>
+                            <td>Beginning of string</td>
+                            <td>^N</td>
+                            <td>N, Nova</td>
+                            <td>“ N”, nova</td>
+                        </tr>
+                        <tr>
+                            <td>$</td>
+                            <td>End of string</td>
+                            <td>a$</td>
+                            <td>Nova, n o v a</td>
+                            <td>“nova ”, NOVA</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <p> Metacharacters must be escaped with a backslash to represent themselves inside a regular expression;
+                    “\” also must be escaped.</p>
+                <h3> Example: Price</h3>
+                <h4 style="text-align:center;">^<span style="color:#AA1342;">\$</span>\d+<span
+                        style="color:#AA1342;">\.</span>\d{2}$</h4>
+                <p>`\d+` matches at least one digit. `\d{2} matches exactly two digits. The first dollar sign is
+                    escaped, `<span style="color:#AA1342;">\$</span>` to match literally and the last dollar sign is not
+                    escaped to match the end of the string. The dot is escaped, `<span style="color:#AA1342;">\.</span>`
+                    to match a dot instead of any character.</p>
+
+                <h2>Or Statements</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th class="blue"></th>
+                            <th class="blue">Description</th>
+                            <th class="blue">Example</th>
+                            <th class="blue">Match</th>
+                            <th class="blue">Non Match</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr style="background-color: #DFF4FC">
+                            <td>(a|b|c)</td>
+                            <td>a or b or c</td>
+                            <td>gr(a|e)y</td>
+                            <td>gray, grey</td>
+                            <td>gry, greay</td>
+                        </tr>
+                        <tr style="background-color: #FFF">
+                            <td>[abc]</td>
+                            <td>a or b or c</td>
+                            <td>seriali[sz]e</td>
+                            <td>serialise, serialize</td>
+                            <td>serialie, serializse</td>
+                        </tr>
+                        <tr style="background-color: #DFF4FC;border-bottom: 2px solid #045E7C;">
+                            <td>[^abc]</td>
+                            <td>not a or b or c</td>
+                            <td>[^hb]at</td>
+                            <td>cat, mat</td>
+                            <td>hat, bat</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p>Note that `^` on it’s own represents the start of the string while `^` inside of square brackets
+                    negates the `or` statement and matches anything not included in the brackets. Meta character become
+                    literal inside of a set and escaping them is not necessary.
+                </p>
+                <h3> Example: Password Contains a Special Character</h3>
+                <h4 style="text-align:center;">[!@#$%^&amp;*.(),<span style="color:#AA1342;">-</span>]
+                </h4>
+                <p>None of these characters need to be escaped inside a set. Hyphen is a special case and must be the
+                    beginning or end of the set. A hyphen between two characters will match the range between those
+                    characters.</p>
+                <p>[ae-] matches `a`, `e`, and `-`.</p>
+                <p>[a-e] matches `a`,`b`,`c`,`d` and `e`, and does not match `-`.</p>
+
+                <h2>Ranges &amp; Character Classes</h2>
+                <p>Ranges, character class and shorthand class notation are simple ways to match many similar characters
+                    at once.</p>
+                <p>All pattern are not usable in all instances, for example, POSIX character classes are not valid in
+                    JavaScript or when using Python's `re` module.</p>
+
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th>Range</th>
+                            <th>POSIX</th>
+                            <th>Shorthand</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Whitespace</td>
+                            <td></td>
+                            <td>[:space:]</td>
+                            <td>\s</td>
+                        </tr>
+                        <tr>
+                            <td>Not whitespace</td>
+                            <td></td>
+                            <td>^[:space:]</td>
+                            <td>\S</td>
+                        </tr>
+                        <tr>
+                            <td>Letter, Digit, or Underscore</td>
+                            <td>[A-Za-z0-9_]</td>
+                            <td>[:word:]</td>
+                            <td>\w</td>
+                        </tr>
+                        <tr>
+                            <td>Not Letter, Digit, or Underscore</td>
+                            <td>[^A-Za-z0-9_]</td>
+                            <td>^[:word:]</td>
+                            <td>\W</td>
+                        </tr>
+                        <tr>
+                            <td>Digit</td>
+                            <td>[0-9]</td>
+                            <td>[:digit:]</td>
+                            <td>\d</td>
+                        </tr>
+                        <tr>
+                            <td>Not Digit</td>
+                            <td>[^0-9]</td>
+                            <td>^[:digit:]</td>
+                            <td>\D</td>
+                        </tr>
+                        <tr>
+                            <td>Uppercase</td>
+                            <td>[A-Z]</td>
+                            <td>^[:upper:]</td>
+                            <td>\u</td>
+                        </tr>
+                        <tr>
+                            <td>Lowercase</td>
+                            <td>[a-z]</td>
+                            <td>^[:lower:]</td>
+                            <td>\l</td>
+                        </tr>
+                        <tr>
+                            <td>Letter</td>
+                            <td>[A-Za-z]</td>
+                            <td>[:alpha:]</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>Not Letter</td>
+                            <td>[^A-Za-z]</td>
+                            <td>^[:alpha:]</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>Punctuation</td>
+                            <td>[!-/:-@[-`{-~]</td>
+                            <td>[:punct:]</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>Word boundary</td>
+                            <td></td>
+                            <td>[:&lt;:] & [:&gt;:]</td>
+                            <td>\b</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p> A range can include all letters `[A-Za-z]` or just a few `[A-E]`. Ranges match all ASCII characters,
+                    not just letters and numbers, so the expression `[!-+]` matches the characters with ASCII codes
+                    between `!` and `+` which are `!”#$%&amp;’()*+`.
+                </p>
+
+                <h2>Counting Characters</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th class="blue"></th>
+                            <th class="blue">Description</th>
+                            <th class="blue">Example</th>
+                            <th class="blue">Match</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr style="background-color: #DFF4FC">
+                            <td>{min,}</td>
+                            <td>At least min in a row</td>
+                            <td>\d{2,}</td>
+                            <td>42, 42424242</td>
+                        </tr>
+                        <tr style="background-color: #FFF">
+                            <td>{min,max}</td>
+                            <td>Between min - max in a row</td>
+                            <td>\d{2,4}</td>
+                            <td>42, 424, 4242</td>
+                        </tr>
+                        <tr style="background-color: #DFF4FC;border-bottom: 2px solid #045E7C;">
+                            <td>{n}</td>
+                            <td>exactly n in a row</td>
+                            <td>\d{2}</td>
+                            <td>42</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p>
+                    Adding counts to a regular expression can highlight the importance of making the pattern as specific
+                    as possible. The regular expression `\d{6}` will match six digit numbers. However, without context
+                    before and/or after it will also match any number with more than 6 digits.
+                </p>
+
+                <h3> Example: Phone Number</h3>
+                <h4 style="text-align:center;">
+                    ^\(\d{3}\)\s\d{3}-<span style="color:#AA1342;">\d{4}</span><span style="color:#206A55;">$</span>
+                </h4>
+                <p>`<span style="color:#AA1342;">\d{4}</span>` without`<span style="color:#206A55;">$</span>`matches
+                    `1234567890` because we didn't specify that the four digits not be followed by six more digits.</p>
+
+                <h2>Lookarounds</h2>
+                <p>Lookahead and Lookbehind assertions check the pattern before and after the current location. A
+                    `positive` lookaround matches the pattern and a `negative` lookaround excludes the pattern.
+                </p>
+
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Pattern</th>
+                            <th>Description</th>
+                            <th>Example</th>
+                            <th>Match</th>
+                            <th>Non Match</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>(?=pattern)</td>
+                            <td>Positive lookahead</td>
+                            <td>a(?=b)</td>
+                            <td>ab</td>
+                            <td>aa</td>
+                        </tr>
+                        <tr>
+                            <td>(?!pattern)</td>
+                            <td>Negative lookahead</td>
+                            <td>a(?!b)</td>
+                            <td>aa</td>
+                            <td>ab</td>
+                        </tr>
+                        <tr>
+                            <td>(?&lt;=pattern)</td>
+                            <td>Positive lookbehind</td>
+                            <td>(?&lt;=b)a</td>
+                            <td>ba</td>
+                            <td>ab</td>
+                        </tr>
+                        <tr>
+                            <td>(?&lt;!pattern)</td>
+                            <td>Negative lookbehind</td>
+                            <td>(?&lt;!b)a</td>
+                            <td>aa</td>
+                            <td>ba</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+
+                <h3>Example: Validate Username</h3>
+                <p>Let's write a regular expression to validate a username. In our system, valid usernames may contain:
+                </p>
+                <ul>
+                    <li>6 - 12 characters</li>
+                    <li>Uppercase and lowercase letters</li>
+                    <li>Digits</li>
+                    <li>Special Characters: !#$%&amp;*+-=?^_~</li>
+                    <li>Dot - NOT as first or last character and not consecutively</li>
+                </ul>
+                <p>There are many working solutions to this problem. This solution incorporates lookaround assertions, a
+                    set, a character count, and a character class shorthand.</p>
+
+                <h4 style="text-align:center; padding:10px 0;"><span style="color:#045E7C;">^(?!\.)</span><span
+                        style="color:#AA1342">(?!.*\.\.)</span><span
+                        style="color:#206A55;">[\w!#$%&amp;*+-=?^~]{6,12}</span><span
+                        style="color:#6C1E9A;">(?&lt;!\.)$</span></h4>
+
+                <p> <span style="color:#045E7C;"><b>^(?!\.)</b></span> is a negative lookahead. `^` matches the
+                    beginning of the string, but only if it is not followed by `.` so, any string that doesn't start
+                    with `.` matches this section of the pattern.</p>
+                <p><span style="color:#AA1342;"><b>(?!.*\.\.)</b></span> is a zero-width negative lookahead assertion.
+                    Unlike other lookahead assertions we've seen this one doesn't match a single character, `.*` matches
+                    every character after the assertion until the end of the string; `\.\.` checks that no character is
+                    followed by consecutive dots. </p>
+                <p><span style="color:#206A55;"><b>[\w!#$%&amp;*+-=?^~]{6,12}</b></span> is a set that takes care of
+                    matching all the non dot valid characters. `\w` matches all digits, letters and underscore; each
+                    individual character in `!#$%&amp;*+-=?^~` represents itself, metacharacters inside a set don't need
+                    to be escaped. `{6,12}` matches a minimum of six and maximum of 12 characters.</p>
+                <p><span style="color:#6C1E9A;"><b>(?&lt;!\.)$</b></span> Is a negative lookbehind that matches `$` the
+                    end of the string, but only if it is not proceeded by `.`.</p>
+
+            </div>
+            <footer id="contact">
+                <p style="margin:0 auto; text-align:center;">
+                    <a target="_blank" href="https://github.com/gitburd"><i class="fab fa-github"></i></a>
+                    <a target="_blank" href="https://www.linkedin.com/in/dena-burd/"><i
+                            class="fab fa-linkedin-in fa-fw"></i></a>
+                    <a target="_blank" href="mailto:denaburd@gmail.com"><i class="fas fa-envelope"></i></a>
+                </p>
+            </footer>
+        </div>
+    </div>
+</body>
+
+</html>

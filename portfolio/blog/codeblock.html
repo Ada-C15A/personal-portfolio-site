@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dena Burd: Blog</title>
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css"
+        integrity="sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V" crossorigin="anonymous" />
+    <link rel="stylesheet" href="../assets/prism.css" />
+    <script src="../assets/prism.js"></script>
+    <style>
+        h1 {
+            padding: 20px 0;
+            font-size: 32px;
+        }
+
+        h2 {
+            padding: 15px 0;
+            font-size: 28px;
+        }
+
+        h3 {
+            padding: 10px 0;
+            font-size: 22px;
+        }
+
+        .code_example {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
+
+        code {
+            font-size: 16px;
+        }
+    </style>
+
+</head>
+
+
+<body>
+    <div id='wrapper'>
+        <div id="sidebar-wrapper">
+            <!-- <a href="#" id="menu-toggle-off"><i class="fas fa-bars"></i></a> -->
+            <div class='site-id' style="padding-top: 15vh;">
+                <h1>DENA <strong>BURD</strong></h1>
+                <h2>Software Engineer</h2>
+            </div>
+            <nav>
+                <ul class="sidebar-nav navbar-nav flex-column text-sm-center">
+                    <li><a href="../index.html#about">About</a></li>
+                    <li><a href="../index.html#projects">Projects</a></li>
+                    <li><a href="./posts.html">Blog</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <div id='page-content-wrapper'>
+            <div id="topbar-wrapper">
+                <a style="float:left" href="../index.html">Dena Burd</a>
+                <a href="#contact">Contact</a>
+                <a href="./posts.html">Blog</a>
+                <a href="../index.html#projects">Work</a>
+                <a href="../index.html#about">About</a>
+            </div>
+
+            <header>
+                <img class="post-image" src="../images/code_block.png" alt=" post image">
+            </header>
+            <div class='container'>
+                <h1>Code Snippets in HTML</h1>
+                <p>Writing about code it fun! But what's they best way to display your code snippet on an HTML page?
+                    This post
+                    will cover the appropriate tags to use, and how to add Prism to HTML pages &amp; WordPress themes to
+                    give your code snippets beautiful syntax highlighting.</p>
+                <p>The simplest way to display code snippets in HTML is by using the "pre" and "code" tags like this:
+                </p>
+
+                <article class="code_example">
+                    <div>
+                        <p>CODE</p>
+                        <p>&lt;pre&gt;&lt;code&gt;&amp;lt;p&amp;gt;Hello
+                            World!&amp;lt;\p&amp;gt;&lt;/code&gt;&lt;/pre&gt;</p>
+                    </div>
+                    <div>
+                        <p>RESULT</p>
+                        <pre><code>&lt;p&gt;Hello World!&lt;/p&gt;</code></pre>
+                    </div>
+                </article>
+                <p>Notice that in the "pre code" block character encoding must be taken into account to display the
+                    following: </p>
+                <ul>
+                    <li>Ampersand: &amp;amp;</li>
+                    <li>Less than: &amp;lt;</li>
+                    <li>Greater than: &amp;gt;</li>
+                </ul>
+                <p>A "pre code" block preserves the indentation and line spacing, which makes the code blocks easier to
+                    read and is useful for languages such as Python where indentation is critically important.</p>
+                <p>The "pre" and "code" tags should be aligned normally with other tags on the page. Start typing the
+                    code on the same line with no extra whitespace. New lines should be aligned with the left edge of
+                    the
+                    page, not keep inline with the other html code.</p>
+                <article class="code_example">
+                    <p>CODE</p>
+                    <pre><code>&lt;main&gt;
+    &lt;section&gt;
+        &lt;article&gt;           
+            &lt;pre&gt;&lt;code&gt;from functools import lru_cache
+@lru_cache()
+def fibonacci(n):
+    if type(n) != int:
+        raise TypeError("n must be a positive int")
+    if n &lt; 1: 
+        raise TypeError("n must be a positive int") 
+    if n==1: 
+        return 1 
+    elif n==2: 
+        return 1
+    elif n &gt; 2:
+        return fibonacci(n-1) + fibonacci(n-2)&lt;/code&gt;&lt;pre/&gt;</code></pre>
+                </article>
+                <article>
+                    <p>RESULT</p>
+                    <pre><code>from functools import lru_cache
+@lru_cache()
+def fibonacci(n):
+    if type(n) != int:
+        raise TypeError("n must be a positive int")
+    if n &lt; 1:
+        raise TypeError("n must be a positive int")
+    if n == 1:
+        return 1
+    elif n == 2:
+        return 1
+    elif n &gt; 2:
+        return fibonacci(n-1) + fibonacci(n-2)</code></pre>
+                </article>
+                <h2>Style with Prism</h2>
+                <p><a href="https://prismjs.com/" target="_blank">Prism</a> is a simple, beautiful, lightweight syntax
+                    highlighter. It's compatible with hundreds of languages and offers eight color themes. You can check
+                    out
+                    the themes <a href="https://prismjs.com/test.html#language=markup" target="_blank">here</a>.
+                    This is what the Python code above looks like
+                    using Prism with the "Tomrrow Night" theme:
+                </p>
+                <article>
+                    <pre><code class="language-python">from functools import lru_cache
+@lru_cache()
+def fibonacci(n):
+    if type(n) != int:
+        raise TypeError("n must be a positive int")
+    if n &lt; 1:
+        raise TypeError("n must be a positive int")
+    if n == 1:
+        return 1
+    elif n == 2:
+        return 1
+    elif n &gt; 2:
+        return fibonacci(n-1) + fibonacci(n-2)</code></pre>
+                </article>
+                <p>Much nicer!</p>
+                <h3>2 options to include Prism in an html project:</h3>
+                <h4 style="font-size:18px; font-weight:bold;">1. Link the style sheets with a CDN</h4>
+                <p>You can get the necessary links from <a href="https://cdnjs.com/libraries/prism"
+                        target="_blank">cdnjs</a>. Copy the links
+                    for the "prism-core.min.js" file as well as the css file for your chosen theme and add them to the
+                    head of your
+                    html page. This option is quick and easy but may slow down your page. It also won't work well for a
+                    CMS, such as WordPress.
+                </p>
+
+                <h4 style="font-size:18px; font-weight:bold;">2. Download the files and add them to your project folder
+                </h4>
+                <p>Prism is simple to download and allows you to select only the languages and features you need to keep
+                    it as lightweight as possible. Go <a target="_blank"
+                        href="https://prismjs.com/download.html#themes=prism&languages=markup+css+clike+javascript">
+                        here</a> to select your theme, languages, addtional featueres and download the js and css files.
+                    For my examples I included the "Copy to Clipboard Button" which is in "Plugins", the last section.
+                    Other helpful plugins include "Line Numbers", to print the line numbers and "Unescaped Markup", to
+                    avoid having to replace
+                    "&lt;" with "&amp;lt;".
+                </p>
+                <h3>Using Prism</h3>
+                <p>Once you have the files downloaded, link them by path in the head of your html page. If you put the
+                    files in an assests folder it might look something like this:</p>
+                <pre><code class="language-markup">&lt;link rel="stylesheet" href="./assets/prism.css"/>
+&lt;script src="./assets/prism.js"&gt;&lt;/script&gt;</code></pre>
+                <p>
+                    Once you have Prism linked in your project all it takes to display fancy syntax highlighting is
+                    adding a class to the code tag:</p>
+                <pre><code class="language-markup">&lt;pre&gt;&lt;code class="language-python"&gt;...
+...
+&lt;/code&gt;&lt;/pre&gt;</code></pre>
+                <p>Somehting to keep in mind is that the class for HTML is "language-markup", which will also work for
+                    XML, SVG, MAthML, SSML, Atom, and RSS.
+                </p>
+                <h3>Prism and WordPress</h3>
+                <p>WordPress has many plugin options for styling code snippets, so why choose to add Prism instead? If
+                    you are concerned about speed and want to use as few plugins as possible, or simply prefer the look
+                    and features available with Prism, adding it to your theme is fairly straightforward.</p>
+                <ol>
+                    <li>
+                        <p><a
+                                href="https://prismjs.com/download.html#themes=prism&languages=markup+css+clike+javascript">
+                                Download</a> Prism with your desired options.</p>
+                    </li>
+                    <li>
+                        <p>Move the css and js files to your theme folder. I put prism.css in ./assets/css and prism.js
+                            in ./assets/js from the root.</p>
+                    </li>
+                    <li>
+                        <p>Update your functions.php file to "add_action" the files.</p>
+                    </li>
+                </ol>
+                <p>This is the code you need to add to functions.php to connect Prism to your theme:</p>
+                <pre><code class="language-php">function add_prism() {
+    wp_enqueue_style( 'prism-css',  get_stylesheet_directory_uri() . '{path-to-prism.css}/prism.css' );
+    wp_enqueue_script( 'prism-js',  get_stylesheet_directory_uri() . '{path-to-prism.js}/prism.js', [], false, true );
+}
+add_action( 'wp_enqueue_scripts', 'add_prism' );</code></pre>
+
+                <p>The process of calling "add_action" and using "wp_enqueue_scripts" is the same method someone would
+                    use to add somehting like Font Awesome Icons, Google Fonts, or Bootstrap CSS to their theme.</p>
+                <p>Now you are ready to use Prism in WordPress, just use an HTML block with the "pre" and "code" tags
+                    and language class as described above.</p>
+                <p>If that didn't make any sense and you've never made a child theme before, check out this <a
+                        target="_blank"
+                        href="https://www.wpbeginner.com/wp-themes/how-to-create-a-wordpress-child-theme-video/">
+                        article.</a></p>
+            </div>
+            <footer id="contact">
+                <p style="margin:0 auto; text-align:center;">
+                    <a target="_blank" href="https://github.com/gitburd"><i class="fab fa-github"></i></a>
+                    <a target="_blank" href="https://www.linkedin.com/in/dena-burd/"><i
+                            class="fab fa-linkedin-in fa-fw"></i></a>
+                    <a target="_blank" href="mailto:denaburd@gmail.com"><i class="fas fa-envelope"></i></a>
+                </p>
+            </footer>
+        </div>
+    </div>
+</body>
+
+</html>

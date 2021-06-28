@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dena Burd: Blog</title>
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css"
+        integrity="sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V" crossorigin="anonymous" />
+
+    <style>
+        .blog article {
+            display: grid;
+            grid-template-columns: 1fr 3fr;
+            margin: 40px auto;
+        }
+
+        .container {
+            margin-top: 0;
+        }
+
+        h1 {
+            text-align: center;
+        }
+    </style>
+</head>
+
+
+<body>
+    <div id='wrapper'>
+        <div id="sidebar-wrapper">
+            <!-- <a href="#" id="menu-toggle-off"><i class="fas fa-bars"></i></a> -->
+            <div class='site-id' style="padding-top: 15vh;">
+                <h1>DENA <strong>BURD</strong></h1>
+                <h2>Software Engineer</h2>
+            </div>
+            <nav>
+                <ul class="sidebar-nav navbar-nav flex-column text-sm-center">
+                    <li><a href="../index.html#about">About</a></li>
+                    <li><a href="../index.html#projects">Projects</a></li>
+                    <li><a href="">Blog</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <div id='page-content-wrapper'>
+            <div id="topbar-wrapper">
+                <a style="float:left" href="../index.html">Dena Burd</a>
+                <a href="#contact">Contact</a>
+                <a href="">Blog</a>
+                <a href="../index.html#projects">Work</a>
+                <a href="../index.html#about">About</a>
+            </div>
+            <header>
+                <img class="post-image" src="../images/code_block.png" alt=" post image">
+            </header>
+            <div class='container blog'>
+                <h1
+                    style="font-family:'Open Sans'; text-align:center; background:rgba(135,5,72,1); color:white; font-size:30px; padding:10px; margin:30px 15px 20px 15px;border: 1px solid black; ">
+                    Welcome to my blog!</h1>
+                <article>
+                    <img src="../images/code_block.png" alt="Code symbol art" />
+                    <div>
+                        <h2> <a href="./codeblock.html">Code Snippets in HTML
+                            </a></h2>
+                        <p>Want to learn how to add beautifully styled code snippets to your HTML and WordPress
+                            pages?
+                            Read this to make it a reality!</p>
+                    </div>
+
+                </article>
+                <article>
+                    <img src="../images/regex4.png" alt="Regular expression art" />
+                    <div>
+                        <h2><a href="./regex.html">Regex
+                            </a></h2>
+                        <p>Demystify Regular expressions with a comprehensive breakdown of what they are and how
+                            they
+                            work.</p>
+                    </div>
+
+                </article>
+                <article>
+                    <img src="../images/numpy2.png" alt="Pi symbol art" />
+                    <div>
+                        <h2><a href="./numpy.html">Into to Numpy
+                            </a></h2>
+                        <p>Let's focus on the very basics of Numpy, including how to create, index and manipulate
+                            single
+                            and multi-dimensional arrays.</p>
+                    </div>
+                </article>
+
+            </div>
+            <footer id="contact">
+                <p style="margin:0 auto; text-align:center;">
+                    <a target="_blank" href="https://github.com/gitburd"><i class="fab fa-github"></i></a>
+                    <a target="_blank" href="https://www.linkedin.com/in/dena-burd/"><i
+                            class="fab fa-linkedin-in fa-fw"></i></a>
+                    <a target="_blank" href="mailto:denaburd@gmail.com"><i class="fas fa-envelope"></i></a>
+                </p>
+            </footer>
+        </div>
+    </div>
+</body>
+
+</html>
