@@ -1,0 +1,13 @@
+h1 {
+    text-align: center;
+}
+
+#about_pic {
+    border: 2px solid green;
+    width: 335px;
+}
+
+img + p {
+    background-color: lightpink;
+    float: right;
+}
