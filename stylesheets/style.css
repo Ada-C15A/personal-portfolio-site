@@ -1,0 +1,205 @@
+/* font-family: 'Aref Ruqaa', serif;
+font-family: 'Italiana', serif;
+font-family: 'Josefin Slab', serif;
+font-family: 'New Tegomin', serif;
+font-family: 'ZCOOL XiaoWei', serif; 
+Index page  and header/title/ nav bar */
+.main {
+    display: flex;
+    flex-wrap: wrap;
+    width: 1500px;
+    justify-content: center;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    margin: 20px;
+}
+
+h1.title {
+    font-family: 'New Tegomin', serif;
+    font-size: 82px;
+    display: flex;
+    justify-content: center;
+    color: midnightblue;
+}
+
+nav {
+    position: sticky;
+    top: 0;
+    z-index: +1;
+    display: inline-flex;
+    justify-content: space-around;
+    height: 50px;
+    width: 100%;
+    margin: 15px;
+    font-family: 'New Tegomin', serif;
+    font-size: 18px;
+    background-color: #f1f1f1;;
+}
+
+p {
+    color: black;
+}
+/* portfolio page */
+
+#img-box-1 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:center;
+    margin: 20px;
+}
+
+#img-box-2 {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-left: 25px;
+}
+
+/* about page */
+
+.about-likes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 25px;
+}
+.about-likes h3 {
+    height: 25px;
+    width: 100%;
+
+}
+.about-likes h4 {
+    height: 25px;
+    width: 100%;
+}
+
+#nail-art {
+    width: 100%;
+    margin: 25px;
+}
+
+#nail-art img{
+    display: inline-flex;
+    justify-content: space-around;
+    width: 200px;
+    height: 300px;
+    object-fit: cover;
+    margin: 25px;
+} 
+
+/* about page */
+
+#words {
+    width: 100%;
+    margin: 25px;
+}
+
+.wordy-words {
+    font: 'New Tegomin', serif;
+}
+
+#words img {
+    display: inline-flex;
+    justify-content: space-around;
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    margin: 25px;
+    border-radius: 15px;
+}
+
+#hats {
+    width: 100%;
+    margin: 25px;
+}
+
+#hats img {
+    display: inline-flex;
+    justify-content: space-around;
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    margin: 25px;
+    border-radius: 15px;
+}
+
+.article-1 {
+    width: 100%;
+    margin: 25px;
+}
+
+/*  recipes page    */
+.ingredients {
+    display: flex;
+}
+
+.wordy-words h2, h3, h4, h5 {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.ingredients-title-box h4 {
+    display: flex;
+    justify-content: flex-start;
+    font-size: 18px;
+    margin-left: 25px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.ingredients-title-box {
+    display: flexbox;
+    flex-wrap: wrap;
+    width: 300px;
+    height: 40px;
+    align-items: center;
+}
+
+.ingredients-title-box ul li {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.article-1 .ingredients img {
+    display: inline-flex;
+    justify-content: flex-start;
+    width: 400px;
+    height: 600px;
+    object-fit: cover;
+    margin: 25px;
+}
+
+.article-1 p {
+    line-height: 25px;
+    font-family:'New Tegomin', serif;
+}
+
+.ingredients-title-box ul {
+    display: flex;
+    flex-direction: column;
+    line-height: 45px;
+}
+
+.article-2 .ingredients img {
+    display: inline-flex;
+    justify-content: flex-start;
+    width: 400px;
+    height: 600px;
+    object-fit: cover;
+    margin: 25px;
+}
+
+.article-2 p {
+    line-height: 25px;
+    font-family: 'New Tegomin', serif;
+}
+
+/* footer area */
+footer {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin: 15px;
+    font-family: 'Montserrat', sans-serif;
+    position: absolute;
+}
