@@ -1,0 +1,138 @@
+.projects-title{
+  margin-top: 8.5rem;
+  text-align: center;
+}
+
+.all-images{
+  position:relative;
+}
+
+.project-image section, .post-image section{
+    display: inline-block;
+    width: 26%;
+    height: 22vw;
+    border: 3px solid black;
+    border-radius: 30%;
+    overflow:hidden;
+}
+
+.project section {
+  background-color: white;
+  border:none;
+  border-radius: 0;
+  height: 4vw;
+  line-height: 4vw;
+  margin-top: 4vw;
+  padding-bottom: 9.27vw;
+  position: relative;
+  text-align:center;
+  opacity: 0;
+  width: 100%;
+}
+
+.hidden:hover {
+  color:black;
+  font-size: 2rem;
+  opacity: .7;
+  transition: opacity .4s ease-in-out;
+}
+.hidden:hover h4{
+  margin-bottom: 0vw;
+}
+
+.hidden:hover .project-details {
+  font-size: 1rem;
+  font-weight: bold;
+  margin-top: 0vw;
+}
+
+.first-project, .first-post{
+  /*Unfortunately, css does not seem to support alt text for background images.*/
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  top: 0vw;
+  left: 5%;
+}
+
+.second-project, .second-post{
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  top: 15vw;
+  left: 37%;
+}
+
+.third-project, .third-post{
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  top: 30vw;
+  left:69%;
+}
+
+.first-project{
+  background-image:url(../images/blockbuster3.jpeg);
+}
+
+.second-project{
+  background-image:url(../images/to-do1.jpeg);
+}
+
+.third-project{
+  background-image:url(../images/pieChartYum.jpg);
+}
+
+.project-image  img{
+  width:100%;
+}
+
+.blog-title{
+  margin-top: 8.5rem;
+  padding-left: 5%;
+}
+
+.first-post{
+  position: absolute;
+  top: 0vw;
+  left: 5%;
+  background-image:url(../images/MandalaDance30.jpg);
+}
+
+.second-post{
+  position: absolute;
+  top: 25vw;
+  left: 5%;
+  background-image:url(../images/mystery-hunt-2014-1.jpg);
+}
+
+.third-post{
+  position: absolute;
+  top: 50vw;
+  left: 5%;
+  background-image:url(../images/India-1.jpg);
+}
+
+section.post:hover{
+  opacity:.5;
+}
+
+article.post{
+  display:inline;
+  float:right;
+  margin-top: 4vw;
+  margin-bottom: 8vw;
+  padding-right: 5%;
+  width:60%;
+}
+
+#footer-portfolio{
+  margin-top: 83vw;
+}
+
+#footer-blog{
+  margin-top: 90vw;
+}
