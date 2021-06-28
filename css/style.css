@@ -1,0 +1,93 @@
+body {
+    background-color:rgb(255, 220, 204);
+}
+
+
+#myLinks {
+    display:flex;
+    justify-content: space-around;
+}
+
+.headerLink { 
+    text-decoration: none;
+    font-size: 200%;
+    color:#8a4016
+}
+
+.introduction  {
+    color: #8a4016;
+    padding-top: 30%;
+}
+.characteristics {
+    display:none;
+}
+
+.aboutMe {
+    font-size: 18px;
+    color: #8a4016;
+}
+
+.selfPicture, .img{    
+    width: 80%;
+    height:auto;
+    margin-left: 2%;
+}
+
+h1 {
+    font-size: 20px;
+}
+
+.background,.hobby{
+    color: #8a4016;
+}
+
+@media only screen and (min-width: 768px){
+    body {
+        background:linear-gradient(90deg,rgb(255, 220, 204) 60%,white 40%) ;
+    }
+    .introduction-page {
+        width: 100%;
+    }
+    
+   .introduction{
+    float:left;
+    width:60%;
+    padding-top: 9%;
+   }
+   
+   .characteristics{
+    display:flex;
+    flex-direction: column;
+    /* float:right; */
+    margin-right: 5%;
+    
+ 
+   }
+
+   .characteristics{
+       font-size: 50px;
+       justify-content: space-between;
+   }
+
+   span {
+       font-size:10px
+   }
+   
+   .aboutMe, .hobby-page {
+       margin-top: 10%;
+   }
+   .background, .hobby{
+       float:left;
+       width:60%;
+       font-size: 20px;
+   }
+   
+   .selfPicture, .hikingPic{  
+       width: 30%;
+       height:auto;
+   } 
+   .hikingPic {
+       float: right;
+   }
+
+} 
