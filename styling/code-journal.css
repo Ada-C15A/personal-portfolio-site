@@ -1,0 +1,45 @@
+header {
+    text-align: center;
+    padding-bottom: 80px;
+}
+
+header, section {
+    width: 50%;
+    margin: auto;
+}
+header h1{
+    font-size: 30px;
+    padding-top: 32px;
+}
+header p {
+    line-height: 175%;
+    font-size: 20px;
+}
+
+section h3 {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+}
+
+section p {
+    font-size: 18px;
+}
+
+section img {
+    width: 100%;
+}
+
+section {
+    padding-top: 40px;
+}
+
+a:link, a:visited {
+    color: black;
+    text-decoration: none;
+}
+
+a:hover {
+    color: rgb(89, 110, 87);
+    background-color: rgb(203, 214, 203);
+}

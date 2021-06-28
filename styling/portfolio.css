@@ -1,0 +1,48 @@
+.main-content header h1{
+    text-align: center;
+    font-size: 40px;
+}
+
+.items p {
+    text-align: justify;
+    line-height: 175%;font-size: 18px;
+}
+
+.main-content img {
+    width: 100%;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 50%;
+    margin: auto;
+}
+
+.items {
+    padding-bottom: 75px;
+}
+
+.items img{
+    width: 100%;
+}
+
+.items p{
+    text-align: justify;
+}
+
+.items h2 {
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.items .fab, .items .fas {
+    color: black;
+}
+
+.items .fab:hover, .items .fas:hover {
+    color: rgb(133, 133, 133);
+}
+

@@ -1,0 +1,23 @@
+h1 {
+    font-size: 45px;
+    font-family: 'Big Shoulders Stencil Display', cursive;
+    text-align: center;
+}
+
+.home-intro {
+    width: 50%;
+    margin: auto;
+}
+
+.home-intro h3 {
+    text-align: center;
+}
+
+.home-intro p {
+    text-align: justify;
+    line-height: 175%;
+}
+
+.home-intro img {
+    width: 100%;
+}

@@ -1,0 +1,19 @@
+header {
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 40px;
+}
+
+header, p {
+    width: 50%;
+    margin: auto;
+}
+
+header{
+    font-size: 30px;
+}
+
+content p {
+    line-height: 175%;
+    font-size: 20px;
+}
