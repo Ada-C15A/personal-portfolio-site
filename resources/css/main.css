@@ -1,0 +1,271 @@
+*, :after, :before {
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+}
+
+body {
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 18px;
+    font-weight: 300;
+}
+
+.wrapper {
+    /* height: calc(100vh - 3em); */
+    /* margin-top: 3em; */
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+    perspective: 2px;
+    /* max-width: 900px; */
+}
+
+/* parallax section */
+section {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.parallax::after {
+    content: " ";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    transform: translateZ(-1px) scale(1.5);
+    background-size: 100%;
+    z-index: -1;
+}
+
+.static {
+    background: palegoldenrod;
+}
+
+.bg1::after {
+    background-image: url('/Users/rishaallen/Developer/ada-projects/personal-portfolio-site/resources/images/charles-deluvio-iylxQ1e6sOA-unsplash.jpg');
+}
+
+.bg2::after {
+    background-image: url('/Users/rishaallen/Developer/ada-projects/personal-portfolio-site/resources/images/andrei-lazarev-TnDUX_lvDdk-unsplash.jpg');
+}
+
+/* navigation */
+header {
+    height: 3em;
+    position: fixed;
+    top: 20px;
+    right:0;
+    margin: 25px 50px;
+    z-index: 1;
+    font-size: 21px;
+}
+
+.logo-name {
+    position: fixed;
+    display: flex;
+    flex-wrap: nowrap;
+    text-decoration: none;
+    top: 52px;
+    left: 134px;
+}
+
+.lastname {
+    padding-left: 14px;
+}
+
+.navigation--menu ul {
+    /* background-color: rgba(255,255,255,127); */
+    color: #434b9f!important; 
+    float: right;
+}
+
+.navigation--menu > ul > li {
+    display: inline-block;
+    padding: 0.5rem 1em;
+    list-style: none;
+}
+
+.navigation--menu > ul > li > a {
+    display: flex;
+    flex-wrap: nowrap;
+    left: 10px;
+    text-decoration: none;
+}
+
+/* navigation name styling */
+.navigation--menu > ul > li > a > p {
+    padding-left: 3px;
+    font-weight: 900;
+}
+/* .logo-name {
+    display: inline-block;
+} */
+
+.navigation--menu > ul > li > a:visited {
+    /* color: #434b9f; */
+    color: red;
+}
+
+.navigation--menu > ul > li > a:active {
+    color: rgb(224, 168, 14);
+    font-weight: bold;
+}
+
+.navigation--menu > ul > li > a:hover {
+    color: rgb(224, 168, 14)!important;
+}
+
+.aboutintro {
+    display: inline-block;
+    color:rgb(75, 34, 7);
+    top: 250px;
+    left: 220px;
+}
+
+.page-wrap {
+    display: grid;
+    grid-template-rows: min-content 1fr min-content;
+    background: white;
+    height: calc(100vh - 10px);
+}
+
+.portfoliointro {
+    display: inline-block;
+    color: white;
+    top: 200px;
+    right: 145px;
+}
+
+.github .bold p {
+    font-weight: 900s;
+}
+
+.github--items {
+    color: purple;
+}
+
+.github-title {
+    color: white;
+    padding-right: 25px;
+    left: 250px;
+    position: absolute;
+}
+
+.github-language {
+    padding-bottom: 25px;
+}
+
+.section2 {
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.portfoliointro .section2 > h3 {
+    color:rgb(75, 34, 7);
+}
+
+/* Header/Blog Title */
+.blog-header {
+    padding: 30px;
+    font-size: 40px;
+    text-align: center;
+    /* background: white; */
+}
+
+.leftcolumn {   
+    float: left;
+    width: 75%;
+}
+
+  /* Right column */
+.rightcolumn {
+    float: left;
+    width: 25%;
+    padding-left: 20px;
+}
+
+  /* Add a card effect for articles */
+.card {
+    /* background-color: white; */
+    padding: 20px;
+    margin-top: 20px;
+    position: relative;
+    width: 85%;
+}
+
+  /* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.row {
+    left: 60px;
+    position: relative;
+}
+
+.footer {
+    grid-column: 1 / -1;
+    background:palegoldenrod;
+}
+
+.footer--social ul {
+    list-style: none;
+    color: red;
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.footer--icons-list li {
+    font-size: 32px;
+    width: 35px;
+    height: 35px;
+    margin-right: 8px;
+    display: inline;
+    margin: 0 5px;
+    position: relative;
+    left: 25px;
+    top: 0;
+}
+
+.footer--social > ul > li > a {
+    text-decoration: none;
+}
+
+.footer--social > ul > li > a:visited {
+    color: rgb(253, 246, 227);
+}
+
+.footer--social > ul > li > a:visited {
+    color: rgb(253, 246, 227);
+}
+
+.footer--social > ul > li > a:active {
+    color: rgb(77, 71, 71);
+    color: rgb(253, 246, 227);
+    font-weight: bold;
+}
+
+.footer--social > ul > li > a:hover {
+    color: rgb(175, 79, 14);
+}
+
+.footer--copyright {
+    display: flex;
+    flex-wrap: nowrap;
+    /* left: 25px; */
+    bottom: 10px; 
+    text-align: center;
+    justify-content: center; 
+}
+
+.footer--copyright p {
+    /* padding-right: 10px; */
+    color: rgb(255, 255, 255);
+}
