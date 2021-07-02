@@ -2,12 +2,27 @@ h1 {
     text-align: center;
 }
 
-#about_pic {
-    border: 2px solid green;
-    width: 335px;
+.container {
+    display: flex;
+    margin-bottom: 25px;
+    margin-left: 20%;
+    margin-right: 20%;
 }
 
-img + p {
-    background-color: lightpink;
-    float: right;
+#about_pic {
+    align-self: flex-start;
+    border-radius: 50em;
+    border: 2px solid green;
+    margin: 20px 30px 0 0;
+    object-fit: contain;
+    width: 300px;
+}
+
+section p {
+    flex: 1 1 auto;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: 25px;
+    line-height: 1.5em;
+    margin-right: 49px;
+    margin-top: 45px;
 }
