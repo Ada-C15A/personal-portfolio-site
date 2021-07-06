@@ -1,0 +1,99 @@
+.main {
+    display: flex;
+    flex-wrap: wrap;
+    width: 1500px;
+    justify-content: center;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    margin: 20px;
+}
+
+.header-image {
+    background-image: url(https://i.pinimg.com/originals/0e/90/89/0e9089b44ec668daca59a3ca7582da07.png);
+    background-size: contain;
+	height: 250px;
+}
+
+.header {
+	padding-top: 100px;
+	color: white;
+	font-size: 60px;
+    text-align: center;
+    font-family: 'Bungee Shade', cursive;
+}
+
+nav {
+    position: sticky;
+    top: 0;
+    z-index: +1;
+    display: inline-flex;
+    justify-content: space-around;
+    height: 50px;
+    width: 100%;
+    margin: 15px;
+    font-size: 18px;
+    background-color: #8b4499;
+    font-family: 'Roboto', sans-serif;
+}
+
+.bar {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+a:hover {
+    background-color: rgb(156, 35, 130);
+}
+
+/* About me  */
+.page-header {
+    font-size: 45px;
+    text-align: center;
+    font-family: 'Bungee Shade', cursive;
+}
+
+* {
+    box-sizing: border-box;
+}
+  
+.column-2 {
+    float: left;
+    width: 45%;
+    padding: 40px;
+    padding-left:70px;
+    padding-right: 70px;
+    height: 475px;
+    margin:30px;
+    margin-right:30px;
+    margin-bottom: 70px;
+    background-color: #f7e4f8;
+    line-height:2;
+}
+
+.interests {
+    background: url('../images/githubme.png');
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+}
+
+/* Portfolio */
+
+.whatsinmyfridgeapp {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+}
+
+.myart {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+}
