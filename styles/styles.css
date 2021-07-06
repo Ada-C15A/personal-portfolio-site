@@ -1,0 +1,19 @@
+body {
+  font-family: "Rubik", sans-serif;
+  font-size: 18px;
+  background-color: hsl(305, 76%, 80%);
+}
+
+img {
+  width: 60%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 12px;
+}
+
+section {
+  font-family: "Rubik", sans-serif;
+  font-size: 18px;
+  display: inline;
+}
